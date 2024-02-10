@@ -1,0 +1,419 @@
+2024-02-10 21:46:29,340 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [Test worker] Could not detect default configuration classes for test class [com.spring.camel.route.SpringCamelRouteExample1ApplicationTests]: SpringCamelRouteExample1ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-02-10 21:46:29,376 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [Test worker] Found @SpringBootConfiguration com.spring.camel.route.SpringCamelRouteExample1Application for test class com.spring.camel.route.SpringCamelRouteExample1ApplicationTests
+2024-02-10 21:46:29,546 INFO o.s.b.StartupInfoLogger [Test worker] Starting SpringCamelRouteExample1ApplicationTests using Java 17.0.7 with PID 25641 (started by spartans in /Volumes/Macintosh-User/workspace/workspace_spring/spring-camel-route-example1)
+2024-02-10 21:46:29,547 DEBUG o.s.b.StartupInfoLogger [Test worker] Running with Spring Boot v3.2.2, Spring v6.1.3
+2024-02-10 21:46:29,547 INFO o.s.b.SpringApplication [Test worker] The following 1 profile is active: "dev"
+2024-02-10 21:46:30,278 INFO o.a.c.i.e.AbstractCamelContext [Test worker] Apache Camel 4.3.0 (camel-1) is starting
+2024-02-10 21:46:30,282 INFO o.a.c.i.e.AbstractCamelContext [Test worker] Routes startup (started:2)
+2024-02-10 21:46:30,283 INFO o.a.c.i.e.AbstractCamelContext [Test worker]     Started route1 (timer://CamelRoutingWithProfiles)
+2024-02-10 21:46:30,283 INFO o.a.c.i.e.AbstractCamelContext [Test worker]     Started route2 (timer://hello)
+2024-02-10 21:46:30,283 INFO o.a.c.i.e.AbstractCamelContext [Test worker] Apache Camel 4.3.0 (camel-1) started in 3ms (build:0ms init:0ms start:3ms)
+2024-02-10 21:46:30,290 INFO o.s.b.StartupInfoLogger [Test worker] Started SpringCamelRouteExample1ApplicationTests in 0.842 seconds (process running for 1.324)
+2024-02-10 21:46:30,667 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [Test worker] Could not detect default configuration classes for test class [com.spring.camel.route.service.CamelRouteWithProfilesTest]: CamelRouteWithProfilesTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-02-10 21:46:30,670 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [Test worker] Found @SpringBootConfiguration com.spring.camel.route.SpringCamelRouteExample1Application for test class com.spring.camel.route.service.CamelRouteWithProfilesTest
+2024-02-10 21:46:30,682 INFO o.s.b.StartupInfoLogger [Test worker] Starting CamelRouteWithProfilesTest using Java 17.0.7 with PID 25641 (started by spartans in /Volumes/Macintosh-User/workspace/workspace_spring/spring-camel-route-example1)
+2024-02-10 21:46:30,682 DEBUG o.s.b.StartupInfoLogger [Test worker] Running with Spring Boot v3.2.2, Spring v6.1.3
+2024-02-10 21:46:30,682 INFO o.s.b.SpringApplication [Test worker] The following 1 profile is active: "dev"
+2024-02-10 21:46:30,852 INFO o.a.c.i.e.AbstractCamelContext [Test worker] Apache Camel 4.3.0 (camel-2) is starting
+2024-02-10 21:46:30,853 INFO o.a.c.i.e.AbstractCamelContext [Test worker] Routes startup (started:2)
+2024-02-10 21:46:30,853 INFO o.a.c.i.e.AbstractCamelContext [Test worker]     Started route3 (timer://CamelRoutingWithProfiles)
+2024-02-10 21:46:30,853 INFO o.a.c.i.e.AbstractCamelContext [Test worker]     Started route4 (timer://hello)
+2024-02-10 21:46:30,854 INFO o.a.c.i.e.AbstractCamelContext [Test worker] Apache Camel 4.3.0 (camel-2) started in 0ms (build:0ms init:0ms start:0ms)
+2024-02-10 21:46:30,854 INFO o.s.b.StartupInfoLogger [Test worker] Started CamelRouteWithProfilesTest in 0.183 seconds (process running for 1.888)
+2024-02-10 21:46:31,284 INFO o.a.c.s.CamelLogger [Camel (camel-1) thread #1 - timer://CamelRoutingWithProfiles] Timer Invoked and the body is 
+2024-02-10 21:46:31,286 INFO o.a.c.s.CamelLogger [Camel (camel-1) thread #2 - timer://hello] Timer Invoked and the body is 
+2024-02-10 21:46:31,292 INFO o.a.c.s.CamelLogger [Camel (camel-1) thread #1 - timer://CamelRoutingWithProfiles] the body of read file is - file created with body at datetime 2024-02-10T21:46:30.859468
+2024-02-10 21:46:31,292 INFO o.a.c.s.CamelLogger [Camel (camel-1) thread #1 - timer://CamelRoutingWithProfiles] the file read is - file2024-02-10T21_46_30.859468.txt
+2024-02-10 21:46:31,295 INFO o.a.c.s.CamelLogger [Camel (camel-1) thread #1 - timer://CamelRoutingWithProfiles] from Environment DEV environment
+2024-02-10 21:46:31,854 INFO o.a.c.s.CamelLogger [Camel (camel-2) thread #4 - timer://hello] Timer Invoked and the body is 
+2024-02-10 21:46:31,855 INFO o.a.c.s.CamelLogger [Camel (camel-2) thread #3 - timer://CamelRoutingWithProfiles] Timer Invoked and the body is 
+2024-02-10 21:46:33,876 INFO o.a.c.i.e.AbstractCamelContext [Test worker] Apache Camel 4.3.0 (camel-2) is shutting down (timeout:45s)
+2024-02-10 21:46:33,880 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 45 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:46:34,885 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 44 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:46:35,890 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 43 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:46:36,891 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 42 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:46:37,895 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 41 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:46:38,896 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 40 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:46:39,902 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 39 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:46:40,903 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 38 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:46:41,287 INFO o.a.c.s.CamelLogger [Camel (camel-1) thread #1 - timer://CamelRoutingWithProfiles] Timer Invoked and the body is 
+2024-02-10 21:46:41,909 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 37 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:46:42,915 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 36 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:46:43,921 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 35 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:46:44,924 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 34 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:46:45,928 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 33 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:46:46,933 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 32 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:46:47,940 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 31 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:46:48,947 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 30 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:46:49,949 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 29 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:46:50,956 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 28 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:46:51,959 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 27 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:46:52,965 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 26 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:46:53,967 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 25 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:46:54,970 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 24 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:46:55,973 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 23 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:46:56,974 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 22 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:46:57,981 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 21 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:46:58,984 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 20 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:46:59,988 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 19 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:47:00,993 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 18 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:47:01,997 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 17 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:47:03,002 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 16 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:47:04,008 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 15 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:47:05,012 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 14 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:47:06,018 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 13 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:47:07,019 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 12 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:47:08,024 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 11 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:47:09,030 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 10 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:47:10,036 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 9 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:47:11,037 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 8 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:47:12,039 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 7 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:47:13,045 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 6 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:47:14,050 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 5 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:47:15,055 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 4 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:47:16,060 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 3 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:47:17,063 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 2 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:47:18,064 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 1 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 21:47:18,885 WARN o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #5 - ShutdownTask] Interrupted while waiting during graceful shutdown, will force shutdown now.
+2024-02-10 21:47:18,885 WARN o.a.c.i.e.DefaultShutdownStrategy [Test worker] Timeout occurred during graceful shutdown. Forcing the routes to be shutdown now. Notice: some resources may still be running as graceful shutdown did not complete successfully.
+2024-02-10 21:47:18,891 INFO o.a.c.s.CamelLogger [Test worker] Routes stopped (total:2 stopped:2 forced:2)
+2024-02-10 21:47:18,892 INFO o.a.c.s.CamelLogger [Test worker]     Forced stopped route4 (timer://hello)
+2024-02-10 21:47:18,892 INFO o.a.c.s.CamelLogger [Test worker]     Forced stopped route3 (timer://CamelRoutingWithProfiles)
+2024-02-10 21:47:18,895 WARN o.a.c.i.e.DefaultInflightRepository [Test worker] Shutting down while there are still 2 inflight exchanges.
+2024-02-10 21:47:18,899 INFO o.a.c.i.e.AbstractCamelContext [Test worker] Apache Camel 4.3.0 (camel-2) shutdown in 45s22ms (uptime:48s)
+2024-02-10 21:47:18,935 INFO o.a.c.i.e.AbstractCamelContext [SpringApplicationShutdownHook] Apache Camel 4.3.0 (camel-1) is shutting down (timeout:45s)
+2024-02-10 21:47:18,936 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 45 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:47:19,154 WARN o.a.c.s.CamelLogger [Camel (camel-2) thread #4 - timer://hello] Error processing exchange. Exchange[]. Caused by: [java.util.concurrent.RejectedExecutionException - null]
+java.util.concurrent.RejectedExecutionException: null
+	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.runNotAllowed(RedeliveryErrorHandler.java:491)
+	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.run(RedeliveryErrorHandler.java:424)
+	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.done(RedeliveryErrorHandler.java:414)
+	at org.apache.camel.processor.PollEnricher.process(PollEnricher.java:348)
+	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.handleFirst(RedeliveryErrorHandler.java:462)
+	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.run(RedeliveryErrorHandler.java:438)
+	at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.doRun(DefaultReactiveExecutor.java:199)
+	at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.executeReactiveWork(DefaultReactiveExecutor.java:189)
+	at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.tryExecuteReactiveWork(DefaultReactiveExecutor.java:166)
+	at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.schedule(DefaultReactiveExecutor.java:148)
+	at org.apache.camel.impl.engine.DefaultReactiveExecutor.scheduleMain(DefaultReactiveExecutor.java:59)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:163)
+	at org.apache.camel.impl.engine.CamelInternalProcessor.processNonTransacted(CamelInternalProcessor.java:354)
+	at org.apache.camel.impl.engine.CamelInternalProcessor.process(CamelInternalProcessor.java:330)
+	at org.apache.camel.component.timer.TimerConsumer.sendTimerExchange(TimerConsumer.java:293)
+	at org.apache.camel.component.timer.TimerConsumer$1.doRun(TimerConsumer.java:164)
+	at org.apache.camel.component.timer.TimerConsumer$1.run(TimerConsumer.java:136)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
+2024-02-10 21:47:19,167 WARN o.a.c.s.CamelLogger [Camel (camel-2) thread #3 - timer://CamelRoutingWithProfiles] Error processing exchange. Exchange[]. Caused by: [java.util.concurrent.RejectedExecutionException - null]
+java.util.concurrent.RejectedExecutionException: null
+	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.runNotAllowed(RedeliveryErrorHandler.java:491)
+	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.run(RedeliveryErrorHandler.java:424)
+	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.done(RedeliveryErrorHandler.java:414)
+	at org.apache.camel.processor.PollEnricher.process(PollEnricher.java:348)
+	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.handleFirst(RedeliveryErrorHandler.java:462)
+	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.run(RedeliveryErrorHandler.java:438)
+	at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.doRun(DefaultReactiveExecutor.java:199)
+	at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.executeReactiveWork(DefaultReactiveExecutor.java:189)
+	at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.tryExecuteReactiveWork(DefaultReactiveExecutor.java:166)
+	at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.schedule(DefaultReactiveExecutor.java:148)
+	at org.apache.camel.impl.engine.DefaultReactiveExecutor.scheduleMain(DefaultReactiveExecutor.java:59)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:163)
+	at org.apache.camel.impl.engine.CamelInternalProcessor.processNonTransacted(CamelInternalProcessor.java:354)
+	at org.apache.camel.impl.engine.CamelInternalProcessor.process(CamelInternalProcessor.java:330)
+	at org.apache.camel.component.timer.TimerConsumer.sendTimerExchange(TimerConsumer.java:293)
+	at org.apache.camel.component.timer.TimerConsumer$1.doRun(TimerConsumer.java:164)
+	at org.apache.camel.component.timer.TimerConsumer$1.run(TimerConsumer.java:136)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
+2024-02-10 21:47:19,941 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 44 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:47:20,943 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 43 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:47:21,946 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 42 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:47:22,949 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 41 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:47:23,953 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 40 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:47:24,957 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 39 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:47:25,962 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 38 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:47:26,965 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 37 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:47:27,971 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 36 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:47:28,972 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 35 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:47:29,973 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 34 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:47:30,978 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 33 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:47:31,979 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 32 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:47:32,985 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 31 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:47:33,991 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 30 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:47:34,996 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 29 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:47:36,005 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 28 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:47:37,010 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 27 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:47:38,014 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 26 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:47:39,018 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 25 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:47:40,023 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 24 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:47:41,025 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 23 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:47:42,032 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 22 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:47:43,035 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 21 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:47:44,040 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 20 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:47:45,043 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 19 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:47:46,050 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 18 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:47:47,055 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 17 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:47:48,061 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 16 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:47:49,066 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 15 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:47:50,072 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 14 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:47:51,078 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 13 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:47:52,082 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 12 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:47:53,088 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 11 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:47:54,090 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 10 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:47:55,092 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 9 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:47:56,098 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 8 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:47:57,099 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 7 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:47:58,105 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 6 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:47:59,107 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 5 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:48:00,111 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 4 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:48:01,114 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 3 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:48:02,120 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 2 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:48:03,126 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 1 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 21:48:03,941 WARN o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #6 - ShutdownTask] Interrupted while waiting during graceful shutdown, will force shutdown now.
+2024-02-10 21:48:03,940 WARN o.a.c.i.e.DefaultShutdownStrategy [SpringApplicationShutdownHook] Timeout occurred during graceful shutdown. Forcing the routes to be shutdown now. Notice: some resources may still be running as graceful shutdown did not complete successfully.
+2024-02-10 21:48:03,946 INFO o.a.c.s.CamelLogger [SpringApplicationShutdownHook] Routes stopped (total:2 stopped:2 forced:2)
+2024-02-10 21:48:03,947 INFO o.a.c.s.CamelLogger [SpringApplicationShutdownHook]     Forced stopped route2 (timer://hello)
+2024-02-10 21:48:03,947 INFO o.a.c.s.CamelLogger [SpringApplicationShutdownHook]     Forced stopped route1 (timer://CamelRoutingWithProfiles)
+2024-02-10 21:48:03,948 WARN o.a.c.i.e.DefaultInflightRepository [SpringApplicationShutdownHook] Shutting down while there are still 2 inflight exchanges.
+2024-02-10 21:48:03,953 INFO o.a.c.i.e.AbstractCamelContext [SpringApplicationShutdownHook] Apache Camel 4.3.0 (camel-1) shutdown in 45s18ms (uptime:1m33s)
+2024-02-10 21:52:12,524 INFO o.s.b.StartupInfoLogger [restartedMain] Starting SpringCamelRouteExample1Application using Java 17.0.7 with PID 25724 (/Volumes/Macintosh-User/workspace/workspace_spring/spring-camel-route-example1/build/classes/java/main started by spartans in /Volumes/Macintosh-User/workspace/workspace_spring/spring-camel-route-example1)
+2024-02-10 21:52:12,524 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v3.2.2, Spring v6.1.3
+2024-02-10 21:52:12,524 INFO o.s.b.SpringApplication [restartedMain] The following 1 profile is active: "dev"
+2024-02-10 21:52:12,539 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-02-10 21:52:12,539 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-02-10 21:52:12,952 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8080 (http)
+2024-02-10 21:52:12,957 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2024-02-10 21:52:12,958 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-02-10 21:52:12,958 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-02-10 21:52:12,975 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-02-10 21:52:12,976 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 436 ms
+2024-02-10 21:52:13,235 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2024-02-10 21:52:13,260 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2024-02-10 21:52:13,267 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port 8080 (http) with context path ''
+2024-02-10 21:52:13,357 INFO o.a.c.i.e.AbstractCamelContext [restartedMain] Apache Camel 4.3.0 (camel-1) is starting
+2024-02-10 21:52:13,361 INFO o.a.c.i.e.AbstractCamelContext [restartedMain] Routes startup (started:2)
+2024-02-10 21:52:13,361 INFO o.a.c.i.e.AbstractCamelContext [restartedMain]     Started route1 (timer://hello)
+2024-02-10 21:52:13,361 INFO o.a.c.i.e.AbstractCamelContext [restartedMain]     Started route2 (timer://CamelRoutingWithProfiles)
+2024-02-10 21:52:13,361 INFO o.a.c.i.e.AbstractCamelContext [restartedMain] Apache Camel 4.3.0 (camel-1) started in 3ms (build:0ms init:0ms start:3ms)
+2024-02-10 21:52:13,363 INFO o.s.b.StartupInfoLogger [restartedMain] Started SpringCamelRouteExample1Application in 0.963 seconds (process running for 2.604)
+2024-02-10 21:52:14,369 INFO o.a.c.s.CamelLogger [Camel (camel-1) thread #2 - timer://CamelRoutingWithProfiles] Timer Invoked and the body is 
+2024-02-10 21:52:14,369 INFO o.a.c.s.CamelLogger [Camel (camel-1) thread #1 - timer://hello] Timer Invoked and the body is 
+2024-02-10 21:52:14,386 INFO o.a.c.s.CamelLogger [Camel (camel-1) thread #2 - timer://CamelRoutingWithProfiles] the body of read file is - file created with body at datetime 2024-02-10T21:46:30.859468
+2024-02-10 21:52:14,387 INFO o.a.c.s.CamelLogger [Camel (camel-1) thread #2 - timer://CamelRoutingWithProfiles] the file read is - file2024-02-10T21_46_30.859468.txt
+2024-02-10 21:52:14,392 INFO o.a.c.s.CamelLogger [Camel (camel-1) thread #2 - timer://CamelRoutingWithProfiles] from Environment DEV environment
+2024-02-10 21:52:24,370 INFO o.a.c.s.CamelLogger [Camel (camel-1) thread #2 - timer://CamelRoutingWithProfiles] Timer Invoked and the body is 
+2024-02-10 22:12:57,636 INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-02-10 22:12:57,642 INFO o.a.j.l.DirectJDKLog [Thread-5] Stopping ProtocolHandler ["http-nio-8080"]
+2024-02-10 22:12:57,657 INFO o.a.c.i.e.AbstractCamelContext [Thread-5] Apache Camel 4.3.0 (camel-1) is shutting down (timeout:45s)
+2024-02-10 22:12:57,662 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 45 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:12:58,667 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 44 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:12:59,672 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 43 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:13:00,678 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 42 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:13:01,684 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 41 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:13:02,689 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 40 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:13:03,691 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 39 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:13:04,694 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 38 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:13:05,701 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 37 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:13:06,707 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 36 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:13:07,714 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 35 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:13:08,718 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 34 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:13:09,725 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 33 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:13:10,728 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 32 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:13:11,731 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 31 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:13:12,738 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 30 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:13:13,742 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 29 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:13:14,747 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 28 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:13:15,753 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 27 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:13:16,755 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 26 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:13:17,760 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 25 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:13:18,766 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 24 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:13:19,773 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 23 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:13:20,777 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 22 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:13:21,781 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 21 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:13:22,787 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 20 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:13:23,790 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 19 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:13:24,793 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 18 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:13:25,794 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 17 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:13:26,799 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 16 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:13:27,801 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 15 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:13:28,806 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 14 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:13:29,812 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 13 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:13:30,817 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 12 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:13:31,824 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 11 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:13:32,836 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 10 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:13:33,842 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 9 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:13:34,846 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 8 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:13:35,851 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 7 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:13:36,857 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 6 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:13:37,863 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 5 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:13:38,869 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 4 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:13:39,875 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 3 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:13:40,879 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 2 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:13:41,883 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 1 seconds. Inflights per route: [route2 = 1, route1 = 1]
+2024-02-10 22:13:42,663 WARN o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-1) thread #3 - ShutdownTask] Interrupted while waiting during graceful shutdown, will force shutdown now.
+2024-02-10 22:13:42,663 WARN o.a.c.i.e.DefaultShutdownStrategy [Thread-5] Timeout occurred during graceful shutdown. Forcing the routes to be shutdown now. Notice: some resources may still be running as graceful shutdown did not complete successfully.
+2024-02-10 22:13:42,666 INFO o.a.c.s.CamelLogger [Thread-5] Routes stopped (total:2 stopped:2 forced:2)
+2024-02-10 22:13:42,666 INFO o.a.c.s.CamelLogger [Thread-5]     Forced stopped route2 (timer://CamelRoutingWithProfiles)
+2024-02-10 22:13:42,666 INFO o.a.c.s.CamelLogger [Thread-5]     Forced stopped route1 (timer://hello)
+2024-02-10 22:13:42,668 WARN o.a.c.i.e.DefaultInflightRepository [Thread-5] Shutting down while there are still 2 inflight exchanges.
+2024-02-10 22:13:42,670 INFO o.a.c.i.e.AbstractCamelContext [Thread-5] Apache Camel 4.3.0 (camel-1) shutdown in 45s13ms (uptime:21m29s)
+2024-02-10 22:13:42,713 INFO o.s.b.StartupInfoLogger [restartedMain] Starting SpringCamelRouteExample1Application using Java 17.0.7 with PID 25724 (/Volumes/Macintosh-User/workspace/workspace_spring/spring-camel-route-example1/build/classes/java/main started by spartans in /Volumes/Macintosh-User/workspace/workspace_spring/spring-camel-route-example1)
+2024-02-10 22:13:42,714 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v3.2.2, Spring v6.1.3
+2024-02-10 22:13:42,714 INFO o.s.b.SpringApplication [restartedMain] The following 1 profile is active: "dev"
+2024-02-10 22:13:42,836 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8080 (http)
+2024-02-10 22:13:42,837 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2024-02-10 22:13:42,837 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-02-10 22:13:42,837 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-02-10 22:13:42,841 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-02-10 22:13:42,842 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 127 ms
+2024-02-10 22:13:42,845 WARN o.a.c.s.CamelLogger [Camel (camel-1) thread #2 - timer://CamelRoutingWithProfiles] Error processing exchange. Exchange[]. Caused by: [java.util.concurrent.RejectedExecutionException - null]
+java.util.concurrent.RejectedExecutionException: null
+	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.runNotAllowed(RedeliveryErrorHandler.java:491)
+	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.run(RedeliveryErrorHandler.java:424)
+	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.done(RedeliveryErrorHandler.java:414)
+	at org.apache.camel.processor.PollEnricher.process(PollEnricher.java:348)
+	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.handleFirst(RedeliveryErrorHandler.java:462)
+	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.run(RedeliveryErrorHandler.java:438)
+	at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.doRun(DefaultReactiveExecutor.java:199)
+	at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.executeReactiveWork(DefaultReactiveExecutor.java:189)
+	at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.tryExecuteReactiveWork(DefaultReactiveExecutor.java:166)
+	at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.schedule(DefaultReactiveExecutor.java:148)
+	at org.apache.camel.impl.engine.DefaultReactiveExecutor.scheduleMain(DefaultReactiveExecutor.java:59)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:163)
+	at org.apache.camel.impl.engine.CamelInternalProcessor.processNonTransacted(CamelInternalProcessor.java:354)
+	at org.apache.camel.impl.engine.CamelInternalProcessor.process(CamelInternalProcessor.java:330)
+	at org.apache.camel.component.timer.TimerConsumer.sendTimerExchange(TimerConsumer.java:293)
+	at org.apache.camel.component.timer.TimerConsumer$1.doRun(TimerConsumer.java:164)
+	at org.apache.camel.component.timer.TimerConsumer$1.run(TimerConsumer.java:136)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
+2024-02-10 22:13:42,886 WARN o.a.c.s.CamelLogger [Camel (camel-1) thread #1 - timer://hello] Error processing exchange. Exchange[]. Caused by: [java.util.concurrent.RejectedExecutionException - null]
+java.util.concurrent.RejectedExecutionException: null
+	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.runNotAllowed(RedeliveryErrorHandler.java:491)
+	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.run(RedeliveryErrorHandler.java:424)
+	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.done(RedeliveryErrorHandler.java:414)
+	at org.apache.camel.processor.PollEnricher.process(PollEnricher.java:348)
+	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.handleFirst(RedeliveryErrorHandler.java:462)
+	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.run(RedeliveryErrorHandler.java:438)
+	at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.doRun(DefaultReactiveExecutor.java:199)
+	at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.executeReactiveWork(DefaultReactiveExecutor.java:189)
+	at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.tryExecuteReactiveWork(DefaultReactiveExecutor.java:166)
+	at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.schedule(DefaultReactiveExecutor.java:148)
+	at org.apache.camel.impl.engine.DefaultReactiveExecutor.scheduleMain(DefaultReactiveExecutor.java:59)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:163)
+	at org.apache.camel.impl.engine.CamelInternalProcessor.processNonTransacted(CamelInternalProcessor.java:354)
+	at org.apache.camel.impl.engine.CamelInternalProcessor.process(CamelInternalProcessor.java:330)
+	at org.apache.camel.component.timer.TimerConsumer.sendTimerExchange(TimerConsumer.java:293)
+	at org.apache.camel.component.timer.TimerConsumer$1.doRun(TimerConsumer.java:164)
+	at org.apache.camel.component.timer.TimerConsumer$1.run(TimerConsumer.java:136)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+	at java.base/java.util.TimerThread.run(Timer.java:516)
+2024-02-10 22:13:42,918 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2024-02-10 22:13:42,933 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2024-02-10 22:13:42,934 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port 8080 (http) with context path ''
+2024-02-10 22:13:42,952 INFO o.a.c.i.e.AbstractCamelContext [restartedMain] Apache Camel 4.3.0 (camel-2) is starting
+2024-02-10 22:13:42,953 INFO o.a.c.i.e.AbstractCamelContext [restartedMain] Routes startup (started:2)
+2024-02-10 22:13:42,953 INFO o.a.c.i.e.AbstractCamelContext [restartedMain]     Started route3 (timer://CamelRoutingWithProfiles)
+2024-02-10 22:13:42,953 INFO o.a.c.i.e.AbstractCamelContext [restartedMain]     Started route4 (timer://hello)
+2024-02-10 22:13:42,953 INFO o.a.c.i.e.AbstractCamelContext [restartedMain] Apache Camel 4.3.0 (camel-2) started in 0ms (build:0ms init:0ms start:0ms)
+2024-02-10 22:13:42,954 INFO o.s.b.StartupInfoLogger [restartedMain] Started SpringCamelRouteExample1Application in 0.258 seconds (process running for 1292.184)
+2024-02-10 22:13:42,955 INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2024-02-10 22:13:43,958 INFO o.a.c.s.CamelLogger [Camel (camel-2) thread #4 - timer://CamelRoutingWithProfiles] Timer Invoked and the body is 
+2024-02-10 22:13:43,958 INFO o.a.c.s.CamelLogger [Camel (camel-2) thread #5 - timer://hello] Timer Invoked and the body is 
+2024-02-10 22:13:53,781 INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-02-10 22:13:53,784 INFO o.a.j.l.DirectJDKLog [Thread-9] Stopping ProtocolHandler ["http-nio-8080"]
+2024-02-10 22:13:53,789 INFO o.a.c.i.e.AbstractCamelContext [Thread-9] Apache Camel 4.3.0 (camel-2) is shutting down (timeout:45s)
+2024-02-10 22:13:53,790 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 45 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 22:13:54,794 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 44 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 22:13:55,796 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 43 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 22:13:56,800 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 42 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 22:13:57,805 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 41 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 22:13:58,806 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 40 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 22:13:59,807 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 39 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 22:14:00,812 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 38 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 22:14:01,815 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 37 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 22:14:02,820 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 36 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 22:14:03,825 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 35 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 22:14:04,830 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 34 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 22:14:05,836 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 33 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 22:14:06,844 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 32 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 22:14:07,849 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 31 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 22:14:08,851 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 30 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 22:14:09,852 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 29 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 22:14:10,858 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 28 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 22:14:11,863 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 27 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 22:14:12,869 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 26 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 22:14:13,873 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 25 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 22:14:14,875 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 24 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 22:14:15,880 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 23 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 22:14:16,883 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 22 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 22:14:17,889 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 21 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 22:14:18,894 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 20 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 22:14:19,898 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 19 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 22:14:20,901 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 18 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 22:14:21,905 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 17 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 22:14:22,909 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 16 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 22:14:23,915 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 15 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 22:14:24,920 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 14 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 22:14:25,923 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 13 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 22:14:26,924 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 12 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 22:14:27,926 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 11 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 22:14:28,930 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 10 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 22:14:29,933 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 9 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 22:14:30,939 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 8 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 22:14:31,945 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 7 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 22:14:32,948 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 6 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 22:14:33,950 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 5 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 22:14:34,954 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 4 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 22:14:35,958 INFO o.a.c.i.e.DefaultShutdownStrategy$ShutdownTask [Camel (camel-2) thread #6 - ShutdownTask] Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 3 seconds. Inflights per route: [route4 = 1, route3 = 1]
+2024-02-10 22:14:37,720 INFO o.s.b.StartupInfoLogger [restartedMain] Starting SpringCamelRouteExample1Application using Java 17.0.7 with PID 26125 (/Volumes/Macintosh-User/workspace/workspace_spring/spring-camel-route-example1/build/classes/java/main started by spartans in /Volumes/Macintosh-User/workspace/workspace_spring/spring-camel-route-example1)
+2024-02-10 22:14:37,721 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v3.2.2, Spring v6.1.3
+2024-02-10 22:14:37,721 INFO o.s.b.SpringApplication [restartedMain] The following 1 profile is active: "dev"
+2024-02-10 22:14:37,737 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-02-10 22:14:37,737 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-02-10 22:14:38,170 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8080 (http)
+2024-02-10 22:14:38,174 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2024-02-10 22:14:38,175 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-02-10 22:14:38,175 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-02-10 22:14:38,194 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-02-10 22:14:38,194 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 457 ms
+2024-02-10 22:14:38,452 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2024-02-10 22:14:38,477 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2024-02-10 22:14:38,487 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port 8080 (http) with context path ''
+2024-02-10 22:14:38,493 INFO c.s.c.r.s.CamelRouteWithProfiles [restartedMain] Starting the Camel Route
+2024-02-10 22:14:38,502 INFO c.s.c.r.s.CamelRouteWithProfiles [restartedMain] Ending the Camel Route
+2024-02-10 22:14:38,575 INFO o.a.c.i.e.AbstractCamelContext [restartedMain] Apache Camel 4.3.0 (camel-1) is starting
+2024-02-10 22:14:38,579 INFO o.a.c.i.e.AbstractCamelContext [restartedMain] Routes startup (started:2)
+2024-02-10 22:14:38,579 INFO o.a.c.i.e.AbstractCamelContext [restartedMain]     Started route1 (timer://CamelRoutingWithProfiles)
+2024-02-10 22:14:38,579 INFO o.a.c.i.e.AbstractCamelContext [restartedMain]     Started route2 (timer://hello)
+2024-02-10 22:14:38,579 INFO o.a.c.i.e.AbstractCamelContext [restartedMain] Apache Camel 4.3.0 (camel-1) started in 4ms (build:0ms init:0ms start:4ms)
+2024-02-10 22:14:38,581 INFO o.s.b.StartupInfoLogger [restartedMain] Started SpringCamelRouteExample1Application in 1.008 seconds (process running for 1.562)
+2024-02-10 22:14:38,810 INFO o.a.c.i.e.AbstractCamelContext [SpringApplicationShutdownHook] Apache Camel 4.3.0 (camel-1) is shutting down (timeout:45s)
+2024-02-10 22:14:38,813 INFO o.a.c.s.CamelLogger [SpringApplicationShutdownHook] Routes stopped (stopped:2)
+2024-02-10 22:14:38,813 INFO o.a.c.s.CamelLogger [SpringApplicationShutdownHook]     Stopped route2 (timer://hello)
+2024-02-10 22:14:38,813 INFO o.a.c.s.CamelLogger [SpringApplicationShutdownHook]     Stopped route1 (timer://CamelRoutingWithProfiles)
+2024-02-10 22:14:38,814 INFO o.a.c.i.e.AbstractCamelContext [SpringApplicationShutdownHook] Apache Camel 4.3.0 (camel-1) shutdown in 4ms (uptime:0s)
+2024-02-10 22:14:41,208 INFO o.s.b.StartupInfoLogger [restartedMain] Starting SpringCamelRouteExample1Application using Java 17.0.7 with PID 26133 (/Volumes/Macintosh-User/workspace/workspace_spring/spring-camel-route-example1/build/classes/java/main started by spartans in /Volumes/Macintosh-User/workspace/workspace_spring/spring-camel-route-example1)
+2024-02-10 22:14:41,208 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v3.2.2, Spring v6.1.3
+2024-02-10 22:14:41,208 INFO o.s.b.SpringApplication [restartedMain] The following 1 profile is active: "dev"
+2024-02-10 22:14:41,223 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-02-10 22:14:41,223 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-02-10 22:14:41,621 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8080 (http)
+2024-02-10 22:14:41,624 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2024-02-10 22:14:41,625 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-02-10 22:14:41,625 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-02-10 22:14:41,640 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-02-10 22:14:41,641 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 418 ms
+2024-02-10 22:14:41,879 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2024-02-10 22:14:41,903 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2024-02-10 22:14:41,911 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port 8080 (http) with context path ''
+2024-02-10 22:14:41,915 INFO c.s.c.r.s.CamelRouteWithProfiles [restartedMain] Starting the Camel Route
+2024-02-10 22:14:41,927 INFO c.s.c.r.s.CamelRouteWithProfiles [restartedMain] Ending the Camel Route
+2024-02-10 22:14:41,997 INFO o.a.c.i.e.AbstractCamelContext [restartedMain] Apache Camel 4.3.0 (camel-1) is starting
+2024-02-10 22:14:42,002 INFO o.a.c.i.e.AbstractCamelContext [restartedMain] Routes startup (started:2)
+2024-02-10 22:14:42,002 INFO o.a.c.i.e.AbstractCamelContext [restartedMain]     Started route1 (timer://CamelRoutingWithProfiles)
+2024-02-10 22:14:42,002 INFO o.a.c.i.e.AbstractCamelContext [restartedMain]     Started route2 (timer://hello)
+2024-02-10 22:14:42,002 INFO o.a.c.i.e.AbstractCamelContext [restartedMain] Apache Camel 4.3.0 (camel-1) started in 3ms (build:0ms init:0ms start:3ms)
+2024-02-10 22:14:42,003 INFO o.s.b.StartupInfoLogger [restartedMain] Started SpringCamelRouteExample1Application in 0.924 seconds (process running for 1.169)
+2024-02-10 22:14:43,010 INFO o.a.c.s.CamelLogger [Camel (camel-1) thread #2 - timer://hello] Timer Invoked and the body is 
+2024-02-10 22:14:43,010 INFO o.a.c.s.CamelLogger [Camel (camel-1) thread #1 - timer://CamelRoutingWithProfiles] Timer Invoked and the body is 

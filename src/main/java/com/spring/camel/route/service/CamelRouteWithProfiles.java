@@ -1,5 +1,6 @@
 package com.spring.camel.route.service;
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.camel.builder.RouteBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
@@ -10,12 +11,15 @@ import org.springframework.stereotype.Service;
  *       them into profiles and pick it from there.
  */
 @Service
+@Slf4j // to add logging using lombok
 public class CamelRouteWithProfiles extends RouteBuilder {
 
     @Autowired
     private Environment environment;
     @Override
     public void configure() throws Exception {
+//        to add logging into the current code using lombok
+        log.info("Starting the Camel Route");
         from("{{startRoute}}")
                 .log("Timer Invoked and the body is ${body}" )
 //                .log("Timer Invoked and the Processing file ${file:name}" )
@@ -24,6 +28,8 @@ public class CamelRouteWithProfiles extends RouteBuilder {
                 .log("the file read is - ${file:name}" )
                 .to("{{toRoute1}}")
                 .log("from Environment " + environment.getProperty("message"));
+
+        log.info("Ending the Camel Route");
 
         //NOTE: pollEnrich - //this is basically a fresh poll into the directory 'data/input'. The reason to use the
         //      pollEnrich is that i do not want to use the Exchange which is being send from the timer and want to

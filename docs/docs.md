@@ -42,3 +42,48 @@ ________________
 * above snapshot shows the test class written to UNIT Test the application.
 * To build and run the test all in go using Gradle, click on the build as show. This will first start the applcation and then execute Tests on it and yields the final *.jar artifacts. <br/>
 ![click-to-build-from-Gradle-menu.png](assets%2Fclick-to-build-from-Gradle-menu.png)
+
+### Enable logging in SpringBoot using LogBack & Lombock
+* By default spring boot provides libraries for logging which is:
+  * logback-classic
+  * logback-core
+
+* to enable file based logging, create a file called logback.xml in resources directory
+* no-sooner logback.xml is put into resources, when springboot starts it is automatically going to load all the configuration whatever defined into this file.  
+  * When using starters, Logback is used for logging by default. <br/>
+    >   NOTE: Spring Boot preconfigures it with patterns and ANSI colors to make the standard output more readable.
+
+      ### Logback Configuration Logging
+    Even though the default configuration is useful (for example, to get started in zero time during POCs or quick experiments), it’s most likely not enough for our daily needs.
+
+    Let’s see <b>how to include a Logback configuration</b> with a different color and logging pattern, with separate specifications for console and file output, and with a decent rolling policy to avoid generating huge log files.
+
+    First, we should find a solution that allows for handling our logging settings alone instead of polluting application.properties, which is commonly used for many other application settings.
+
+    <b>When a file in the classpath has one of the following names, Spring Boot will automatically load it</b> over the default configuration:
+    *  logback-spring.xml
+    *  logback.xml
+    *  logback-spring.groovy
+    *  logback.groovy
+    
+    >Spring recommends using the -spring variant over the plain ones whenever possible, as described here.
+
+    Let’s write a simple logback-spring.xml:
+  ![logback-xml-configuration.png](assets%2Flogback-xml-configuration.png)
+    > Output:
+        > ![logback-run-output.png](assets%2Flogback-run-output.png)
+    >
+
+* Enable lombok and use it for logging application related info.
+  * For this we have to use @Slf4JLombok, which helps to generate logger for a class.
+    * For clarity see below picture where it is clearly shown the logging for a class with and without lombok.
+    > class with lombok will have @Slf4j annotation on top of class.
+      <br/>class without lombok will have a logger instance created in the beginning of the class.
+      ![class-with-and-without-lombok-for-logging.png](assets%2Fclass-with-and-without-lombok-for-logging.png)
+  * In order to use lombok following dependency to be added into the project.
+    ![lombok-required-dependency.png](assets%2Flombok-required-dependency.png)
+
+> To use lombok in intellij we have to enable the annotation-processing. To do this go to the intellij Settings or Preferences and enable the annotation-processing as per the below snapshot.
+    ![intellij-enable-annotation-processing.png](assets%2Fintellij-enable-annotation-processing.png)
+
+
