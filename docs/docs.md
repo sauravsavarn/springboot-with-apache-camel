@@ -1,7 +1,7 @@
 # Getting Started
 
 ### Application Overview
-![application-overview.png](assets%2Fapplication-overview.png)
+![application-overview.png](assets%2Fappxlication-overview.png)
 
 Above application going to build with spring-boot.
 
@@ -35,4 +35,10 @@ To test this using JUNIT follow dependency is required.
 
 ________________
 
+### Running Test class
+
+ ![test-class-written-to-UNIT-Test-app.png](assets%2Ftest-class-written-to-UNIT-Test-app.png)
  
+* above snapshot shows the test class written to UNIT Test the application.
+* To build and run the test all in go using Gradle, click on the build as show. This will first start the applcation and then execute Tests on it and yields the final *.jar artifacts. <br/>
+![click-to-build-from-Gradle-menu.png](assets%2Fclick-to-build-from-Gradle-menu.png)

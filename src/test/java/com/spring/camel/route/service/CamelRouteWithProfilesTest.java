@@ -17,7 +17,8 @@ import java.io.File;
 import java.io.IOException;
 import java.time.LocalDateTime;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 
 @ActiveProfiles(value = "dev")
 @RunWith(CamelSpringBootRunner.class) //that is which class this Test to run with.
@@ -61,7 +62,7 @@ public class CamelRouteWithProfilesTest {
         Thread.sleep(3000);
 
         // the next step is to check that file is actually moved to the output directory or not.
-        File outFile = new File("data/output" + fileName);
+        File outFile = new File("data/output/" + fileName);
         assertTrue(outFile.exists()); //asserting to check that file actually moved or not to the output directory 'data/output'.
     }
 }
