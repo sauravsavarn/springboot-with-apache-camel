@@ -1,7 +1,7 @@
 # Getting Started
 
 ### Application Overview
-![application-overview.png](assets%2Fappxlication-overview.png)
+![application-overview.png](assets%2Fapplication-overview.png)
 
 Above application going to build with spring-boot.
 
