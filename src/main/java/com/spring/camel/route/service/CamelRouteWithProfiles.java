@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 
+
 /**
  * NOTE: Here unlike class CamelRoute where all the from/to/etc are hard-coded. Here in this example we will define
  *       them into profiles and pick it from there.

@@ -1,7 +1,7 @@
 # Getting Started
 
 ### Application Overview
-![application-overview.png](assets%2Fapplication-overview.png)
+![application-overview.png](assets%2Fimages%2Fapplication-overview.png)
 
 Above application going to build with spring-boot.
 
@@ -18,7 +18,7 @@ ________________
 
 
 ### To testing the Application using JUNIT, now the application overview is changed and as below:
-![application-overview-with-Junit-Testing.png](assets%2Fapplication-overview-with-Junit-Testing.png)
+![application-overview-with-Junit-Testing.png](assets%2Fimages%2Fapplication-overview-with-Junit-Testing.png)
 
 * Manual checking of whether the files are there in the output directory is NOT IDEAL to test the Camel Routes. 
 * Writing test cases with JUNIT is the IDEAL way to check.
@@ -31,17 +31,17 @@ ________________
 ________________
 
 To test this using JUNIT follow dependency is required.
-![junit-test-required-dependency.png](assets%2Fjunit-test-required-dependency.png)
+![junit-test-required-dependency.png](assets%2Fimages%2Fjunit-test-required-dependency.png)
 
 ________________
 
 ### Running Test class
 
- ![test-class-written-to-UNIT-Test-app.png](assets%2Ftest-class-written-to-UNIT-Test-app.png)
+ ![test-class-written-to-UNIT-Test-app.png](assets%2Fimages%2Ftest-class-written-to-UNIT-Test-app.png)
  
 * above snapshot shows the test class written to UNIT Test the application.
 * To build and run the test all in go using Gradle, click on the build as show. This will first start the applcation and then execute Tests on it and yields the final *.jar artifacts. <br/>
-![click-to-build-from-Gradle-menu.png](assets%2Fclick-to-build-from-Gradle-menu.png)
+![click-to-build-from-Gradle-menu.png](assets%2Fimages%2Fclick-to-build-from-Gradle-menu.png)
 
 ### Enable logging in SpringBoot using LogBack & Lombock
 * By default spring boot provides libraries for logging which is:
@@ -69,9 +69,9 @@ ________________
     >Spring recommends using the -spring variant over the plain ones whenever possible, as described here.
 
     Let’s write a simple logback-spring.xml:
-  ![logback-xml-configuration.png](assets%2Flogback-xml-configuration.png)
+  ![logback-xml-configuration.png](assets%2Fimages%2Flogback-xml-configuration.png)
     > Output:
-        > ![logback-run-output.png](assets%2Flogback-run-output.png)
+        > ![logback-run-output.png](assets%2Fimages%2Flogback-run-output.png)
     >
 
 * Enable lombok and use it for logging application related info.
@@ -79,11 +79,14 @@ ________________
     * For clarity see below picture where it is clearly shown the logging for a class with and without lombok.
     > class with lombok will have @Slf4j annotation on top of class.
       <br/>class without lombok will have a logger instance created in the beginning of the class.
-      ![class-with-and-without-lombok-for-logging.png](assets%2Fclass-with-and-without-lombok-for-logging.png)
+      ![class-with-and-without-lombok-for-logging.png](assets%2Fimages%2Fclass-with-and-without-lombok-for-logging.png)
   * In order to use lombok following dependency to be added into the project.
-    ![lombok-required-dependency.png](assets%2Flombok-required-dependency.png)
+    ![lombok-required-dependency.png](assets%2Fimages%2Flombok-required-dependency.png)
 
 > To use lombok in intellij we have to enable the annotation-processing. To do this go to the intellij Settings or Preferences and enable the annotation-processing as per the below snapshot.
-    ![intellij-enable-annotation-processing.png](assets%2Fintellij-enable-annotation-processing.png)
+    ![intellij-enable-annotation-processing.png](assets%2Fimages%2Fintellij-enable-annotation-processing.png)
 
 
+### Connecting to postgresDB running in docker container
+REFER the attached *.md link to see detail explanation for connecting to the postgresSQL database from camel in spring-boot <br/>
+[docs-connecting-to-postgres.md](partials%2Fdocs-connecting-to-postgres.md)
