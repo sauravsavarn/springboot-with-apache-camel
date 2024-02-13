@@ -13,19 +13,22 @@ spring:
     username: postgres
     password: postgres
     jdbc-url: jdbc:postgresql://localhost:5432/postgres-springboot-camel
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: savarn.learning@gmail.com
+    password:
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+mailTo: sauravsavarn@gmail.com
+mailFrom: savarn.learning@gmail.com
 
-startRoute: timer:CamelRoutingWithProfiles?period=10s
-#fromRoute: file:data/dev/input?delete=true&readLock=none
-#toRoute1:  file:data/dev/output
-fromRoute: file:data/inputUsingProfiles?delete=true&readLock=none
-startRouteForDBImpl: timer:CamelRouteWithProfilesAndDBImpl?period=10s
-fromRouteForDBImpl: file:data/inputUsingProfilesAndDBImpl?delete=true&readLock=none
-startRouteForDBImplWithDataValChecks: timer:CamelRouteWithProfilesAndDBImplWithDataValidationChecks?period=10s
-fromRouteForDBImplWithDataValChecks: file:data/inputUsingProfilesAndDBImplWithDataValidationChecks?delete=true&readLock=none
-
-startRouteForDBImplWithDataValChecksAndDLChannelConfig: timer:CamelRouteWithProfilesAndDBImplWithDataValidationChecksAndDeadLetterChannelConfig?period=10s
-fromRouteForDBImplWithDataValChecksAndDLChannelConfig: file:data/inputUsingProfilesAndDBImplWithDataValidationChecksAndDLChannelConfig?delete=true&readLock=none&moveFailed=error
-
+startRoute: timer:CamelRoute?period=10s
+fromRoute: file:data/input?delete=true&readLock=none&moveFailed=error
 toRoute1:  file:data/output
 toRoute2:  jdbc:dataSource #toRoute2 is the route to the database
 toRoute3:  file:data/output?fileName=Success.txt #signify toRoute SUCCESS is logged into.
@@ -42,19 +45,22 @@ spring:
     username: postgres
     password: postgres
     jdbc-url: jdbc:postgresql://localhost:5432/postgres-springboot-camel
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: savarn.learning@gmail.com
+    password:
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+mailTo: sauravsavarn@gmail.com
+mailFrom: savarn.learning@gmail.com
 
-startRoute: timer:CamelRoutingWithProfiles?period=10s
-#fromRoute: file:data/stage/input?delete=true&readLock=none
-#toRoute1:  file:data/stage/output
-fromRoute: file:data/inputUsingProfiles?delete=true&readLock=none
-startRouteForDBImpl: timer:CamelRouteWithProfilesAndDBImpl?period=10s
-fromRouteForDBImpl: file:data/inputUsingProfilesAndDBImpl?delete=true&readLock=none
-startRouteForDBImplWithDataValChecks: timer:CamelRouteWithProfilesAndDBImplWithDataValidationChecks?period=10s
-fromRouteForDBImplWithDataValChecks: file:data/inputUsingProfilesAndDBImplWithDataValidationChecks?delete=true&readLock=none
-
-startRouteForDBImplWithDataValChecksAndDLChannelConfig: timer:CamelRouteWithProfilesAndDBImplWithDataValidationChecksAndDeadLetterChannelConfig?period=10s
-fromRouteForDBImplWithDataValChecksAndDLChannelConfig: file:data/inputUsingProfilesAndDBImplWithDataValidationChecksAndDLChannelConfig?delete=true&readLock=none&moveFailed=error
-
+startRoute: timer:CamelRoute?period=10s
+fromRoute: file:data/input?delete=true&readLock=none&moveFailed=error
 toRoute1:  file:data/output
 toRoute2:  jdbc:dataSource #toRoute2 is the route to the database
 toRoute3:  file:data/output?fileName=Success.txt #signify toRoute SUCCESS is logged into.
@@ -71,19 +77,22 @@ spring:
     username: postgres
     password: postgres
     jdbc-url: jdbc:postgresql://localhost:5432/postgres-springboot-camel
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: savarn.learning@gmail.com
+    password:
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+mailTo: sauravsavarn@gmail.com
+mailFrom: savarn.learning@gmail.com
 
-startRoute: timer:CamelRoutingWithProfiles?period=10s
-#fromRoute: file:data/prod/input?delete=true&readLock=none
-#toRoute1:  file:data/prod/output
-fromRoute: file:data/inputUsingProfiles?delete=true&readLock=none
-startRouteForDBImpl: timer:CamelRouteWithProfilesAndDBImpl?period=10s
-fromRouteForDBImpl: file:data/inputUsingProfilesAndDBImpl?delete=true&readLock=none
-startRouteForDBImplWithDataValChecks: timer:CamelRouteWithProfilesAndDBImplWithDataValidationChecks?period=10s
-fromRouteForDBImplWithDataValChecks: file:data/inputUsingProfilesAndDBImplWithDataValidationChecks?delete=true&readLock=none
-
-startRouteForDBImplWithDataValChecksAndDLChannelConfig: timer:CamelRouteWithProfilesAndDBImplWithDataValidationChecksAndDeadLetterChannelConfig?period=10s
-fromRouteForDBImplWithDataValChecksAndDLChannelConfig: file:data/inputUsingProfilesAndDBImplWithDataValidationChecksAndDLChannelConfig?delete=true&readLock=none&moveFailed=error
-
+startRoute: timer:CamelRoute?period=10s
+fromRoute: file:data/input?delete=true&readLock=none&moveFailed=error
 toRoute1:  file:data/output
 toRoute2:  jdbc:dataSource #toRoute2 is the route to the database
 toRoute3:  file:data/output?fileName=Success.txt #signify toRoute SUCCESS is logged into.

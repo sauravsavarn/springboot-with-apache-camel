@@ -45,6 +45,10 @@ dependencies {
     // https://mvnrepository.com/artifact/org.postgresql/postgresql
     implementation group: 'org.postgresql', name: 'postgresql', version: '42.7.1'
 
+    /////////dependencies required for email notification for error event as per the application overview.
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-mail
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-mail', version: '3.2.2'
+
 
 }
 
