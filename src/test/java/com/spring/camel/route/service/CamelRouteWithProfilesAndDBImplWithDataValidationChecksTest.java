@@ -15,10 +15,11 @@ import org.springframework.test.context.ActiveProfiles;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.time.LocalDateTime;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
+import static org.junit.jupiter.api.Assertions.*;
 
 @ActiveProfiles(value = "dev")
 @RunWith(CamelSpringBootRunner.class) //that is which class this Test to run with.
@@ -30,7 +31,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 // Here 'classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD', means that after each test method run,
 //  clear out the context.
 @SpringBootTest //since this is a SpringBoot application, hence added the annotation.
-public class CamelRouteWithProfilesTest {
+public class CamelRouteWithProfilesAndDBImplWithDataValidationChecksTest {
 
     @Autowired
     ProducerTemplate producerTemplate;
@@ -41,22 +42,25 @@ public class CamelRouteWithProfilesTest {
 
     @BeforeAll
     public static void startCleanUp() throws IOException {
-        FileUtils.cleanDirectory(new File("data/inputUsingProfiles"));
-        //FileUtils.deleteDirectory(new File("data/output")); //commented as for now we are not going to delete this output directory.
+        FileUtils.cleanDirectory(new File("data/inputUsingProfilesAndDBImplWithDataValidationChecks"));
+        FileUtils.deleteDirectory(new File("data/output")); //commented as for now we are not going to delete this output directory.
     }
 
     @Test
-    public void testMoveFile() throws InterruptedException {
+    public void testMoveFile_ADD_TO_DATABASE_Exception () throws InterruptedException, IOException {
 
         String datetime = LocalDateTime.now().toString();
         //first creating content for the file
-        String fileContent = "file created with body at datetime " + datetime;
+        String fileContent = "type,sku#,itemdescription,price,date-of-purchase\n"+
+                "ADD,,LG TV,500,"+datetime+"\n"+
+                "ADD,101,AO SMITH,100,"+datetime;
+        //in the fileContent above sku we make it as empty which is null actually.
 
         //
         String fileName = "file"+datetime.replaceAll(":", "_")+".txt";
 
         //in below method what heppens is that the content is placed into the file and then file will be placed into the input-directory as per ths use-case.
-        producerTemplate.sendBodyAndHeader(environment.getProperty("fromRoute"), fileContent, Exchange.FILE_NAME, fileName);
+        producerTemplate.sendBodyAndHeader(environment.getProperty("fromRouteForDBImplWithDataValChecks"), fileContent, Exchange.FILE_NAME, fileName);
 
         //
         Thread.sleep(3000);
@@ -64,5 +68,11 @@ public class CamelRouteWithProfilesTest {
         // the next step is to check that file is actually moved to the output directory or not.
         File outFile = new File("data/output/" + fileName);
         assertTrue(outFile.exists()); //asserting to check that file actually moved or not to the output directory 'data/output'.
+
+        File successFile = new File("data/output/Success.txt");
+        //
+        assertFalse(successFile.exists() );
+
     }
+
 }

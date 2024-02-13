@@ -90,3 +90,7 @@ ________________
 ### Connecting to postgresDB running in docker container
 REFER the attached *.md link to see detail explanation for connecting to the postgresSQL database from camel in spring-boot <br/>
 [docs-connecting-to-postgres.md](partials%2Fdocs-connecting-to-postgres.md)
+
+### Error/Exception Handling In Camel Routes
+REFER to know all about error & exception handling through Camel Routes.
+[docs-errorORexception-handling-in-camel-routes.md](partials%2Fdocs-errorORexception-handling-in-camel-routes.md)

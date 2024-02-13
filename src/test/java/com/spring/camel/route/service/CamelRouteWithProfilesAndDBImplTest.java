@@ -12,7 +12,7 @@ import org.apache.camel.Exchange;
 import org.apache.camel.ProducerTemplate;
 import org.apache.camel.test.spring.CamelSpringBootRunner;
 import org.apache.commons.io.FileUtils;
-import org.junit.BeforeClass;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,7 +40,7 @@ public class CamelRouteWithProfilesAndDBImplTest {
     @Autowired
     Environment environment;
 
-    @BeforeClass
+    @BeforeAll
     public static void startCleanUp() throws IOException {
         FileUtils.cleanDirectory(new File("data/inputUsingProfilesAndDBImpl"));
         //FileUtils.deleteDirectory(new File("data/output")); //commented as for now we are not going to delete this output directory.
