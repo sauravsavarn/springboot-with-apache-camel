@@ -1,0 +1,86 @@
+version: "3.4"
+services:
+  zookeeper:
+    image: docker.io/bitnami/zookeeper:3.9
+    hostname: zookeeper
+    container_name: spring-camel-route-zookeeper
+    ports:
+      - "2181:2181"
+    volumes:
+      - "zookeeper_data:/bitnami"
+    environment:
+      - ALLOW_ANONYMOUS_LOGIN=yes
+    # networks:
+    #   - kafka_net
+  kafka:
+    image: docker.io/bitnami/kafka:3.4
+    hostname: kafka
+    container_name: spring-camel-route-kafka
+    # expose:
+    #   - 9092
+    #   - 9093
+    #   - 29092
+    #   - 29094
+    ports:
+      - "9092:9092" ##NOT EXPOSING THIS PORT TO OUTSIDE ENV
+      # - "9093:9093" ##NOT EXPOSING THIS PORT TO OUTSIDE ENV
+    environment:
+      # - ALLOW_PLAINTEXT_LISTENER=yes
+      # - KAFKA_ENABLE_KRAFT=no
+      # - KAFKA_CFG_LISTENERS=PLAINTEXT://:9092
+      # - KAFKA_ZOOKEEPER_PROTOCOL=SSL:SSL
+      - KAFKA_ZOOKEEPER_PROTOCOL=PLAINTEXT
+      - KAFKA_CFG_AUTO_CREATE_TOPICS_ENABLE=true
+      - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper:2181
+      - KAFKA_CFG_BROKER_ID=0
+      # - KAFKA_CFG_LISTENERS=SSL://0.0.0.0:9092
+      - KAFKA_CFG_LISTENERS=PLAINTEXT://:9092
+      # - KAFKA_CFG_ADVERTISED_LISTENERS=SSL://0.0.0.0:29092,SSL://0.0.0.0:9092
+      # - KAFKA_CFG_ADVERTISED_LISTENERS=SSL://0.0.0.0:9092
+      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9092
+      - KAFKA_CFG_NUM_PARTITIONS=10
+      # - KAFKA_CFG_DEFAULT_REPLICATION_FACTOR=2
+      - KAFKA_CFG_DEFAULT_REPLICATION_FACTOR=1
+      - KAFKA_CFG_DELETE_TOPIC_ENABLE=true
+    # healthcheck:
+    #   test: [ "CMD-SHELL", "kafka-topics.sh --bootstrap-server kafka:9092 --list" ]
+    #   interval: 5s
+    #   timeout: 10s
+    #   retries: 5
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - '/Volumes/Macintosh-User/db_test_directory/kafka_data_dir/kafka_data:/bitnami/kafka'
+      - '/Volumes/Macintosh-User/db_test_directory/kafka_data_dir/kafka_data:/bitnami'
+      - '/Volumes/Macintosh-User/db_test_directory/kafka_data_dir/kafka_log:/tmp/kafka_mounts/logs'
+    depends_on:
+      - zookeeper
+    # networks:
+    #   - kafka_net
+    restart: on-failure
+  # init-kafka:
+  #   image: confluentinc/cp-kafka:6.1.1
+  #   depends_on:
+  #     - kafka
+  #   entrypoint: [ '/bin/sh', '-c' ]
+  #   command: |
+  #     "
+  #     # blocks until kafka is reachable
+  #     kafka-topics --bootstrap-server kafka:29092 --list
+
+  #     echo -e 'Creating kafka topics'
+  #     kafka-topics --bootstrap-server kafka:29092 --create --if-not-exists --topic my-topic-1 --replication-factor 1 --partitions 1
+  #     kafka-topics --bootstrap-server kafka:29092 --create --if-not-exists --topic my-topic-2 --replication-factor 1 --partitions 1
+
+  #     echo -e 'Successfully created the following topics:'
+  #     kafka-topics --bootstrap-server kafka:29092 --list
+  #     "
+
+networks:
+  default:
+    external:
+      name: learning
+volumes:
+  zookeeper_data:
+    driver: local
+  kafka_data:
+    driver: local

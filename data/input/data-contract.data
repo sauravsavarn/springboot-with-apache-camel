@@ -1,0 +1,7 @@
+{"transactionType":"ADD", "sku":"100", "itemDescription": "Samsung TV", "price": "500.00", "purchaseDateTime": "2024-02-11T18:46:03.195151"}
+{"transactionType":"ADD", "sku":"101", "itemDescription": "LG TV", "price": "500.00", "purchaseDateTime": "2024-02-11T18:46:03.195151"}
+{"transactionType":"UPDATE", "sku":"101", "itemDescription": "LG TV", "price": "700.00", "purchaseDateTime": "2024-02-11T18:46:03.195151"}
+{"transactionType":"DELETE", "sku":"101", "itemDescription": "LG TV", "price": "500.00", "purchaseDateTime": "2024-02-11T18:46:03.195151"}
+
+--Error
+{"transactionType":"ADD", "sku":"", "itemDescription": "ABC TV", "price": "500.00", "purchaseDateTime": "2024-02-11T18:46:03.195151"}

@@ -57,6 +57,22 @@ dependencies {
     // https://mvnrepository.com/artifact/org.apache.camel/camel-http
     implementation group: 'org.apache.camel', name: 'camel-http', version: '4.3.0'
 
+    /////////dependencies required for kafka camel integration
+    // https://mvnrepository.com/artifact/org.apache.camel.springboot/camel-kafka-starter
+    implementation group: 'org.apache.camel.springboot', name: 'camel-kafka-starter', version: '4.3.0'
+
+    // https://mvnrepository.com/artifact/org.apache.camel/camel-kafka
+    implementation group: 'org.apache.camel', name: 'camel-kafka', version: '4.3.0'
+
+    /////////dependencies required for JSON to JAVA object conversion.
+    // https://mvnrepository.com/artifact/org.apache.camel/camel-gson
+    implementation group: 'org.apache.camel', name: 'camel-gson', version: '4.3.0'
+
+    /////////dependencies required to print the data post data persistence in sql db
+    // https://mvnrepository.com/artifact/org.apache.camel/camel-sql
+    implementation group: 'org.apache.camel', name: 'camel-sql', version: '4.3.0'
+
+
 
 }
 

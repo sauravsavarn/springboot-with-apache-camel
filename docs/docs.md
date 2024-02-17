@@ -101,3 +101,5 @@ REFER to know all about error & exception handling through Camel Routes.
 ### Monitoring The Camel Route App Health
 [docs-monitoring-the-camel-route-app-health.md](partials%2Fdocs-monitoring-the-camel-route-app-health.md)
 
+### Building Kafka Camel Route as Kafka -> DB -> mail
+[docs-build-kafka-camel-route-for-kafka-db-mail.md](partials%2Fdocs-build-kafka-camel-route-for-kafka-db-mail.md)

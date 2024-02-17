@@ -1,3 +1,0 @@
-type,sku#,itemdescription,price,date-of-purchase
-ADD,,LG TV,500,2024-02-17T09:16:32.585220
-ADD,101,AO SMITH,100,2024-02-17T09:16:32.585220

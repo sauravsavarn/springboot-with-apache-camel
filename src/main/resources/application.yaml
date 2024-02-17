@@ -39,12 +39,15 @@ spring:
 mailTo: sauravsavarn@gmail.com
 mailFrom: savarn.learning@gmail.com
 
-startRoute: timer:CamelRoute?period=10s
-fromRoute: file:data/input?delete=true&readLock=none&moveFailed=error
+fromRoute: kafka:input_item_topic?brokers=localhost:9092&groupId=1&autoOffsetReset=earliest&consumersCount=3
+toRoute: log:?level=info&showBody=true
 toRoute1:  file:data/output
 toRoute2:  jdbc:dataSource #toRoute2 is the route to the database
 toRoute3:  file:data/output?fileName=Success.txt #signify toRoute SUCCESS is logged into.
 healthRoute: timer:HealthRoute?period=10s  #as want this health endpoint to hit every 10sec, and then check the status of all the components in the camel. If any status is DOWN, then want to trigger an email to the appropriate team.
+
+fromRouteTest: direct:input
+errorRoute: kafka:error_topic?brokers=localhost:9092
 
 message: DEV environment
 ---
@@ -72,12 +75,15 @@ spring:
 mailTo: sauravsavarn@gmail.com
 mailFrom: savarn.learning@gmail.com
 
-startRoute: timer:CamelRoute?period=10s
-fromRoute: file:data/input?delete=true&readLock=none&moveFailed=error
+fromRoute: kafka:input_item_topic?brokers=localhost:9092&groupId=1&autoOffsetReset=earliest&consumersCount=1
+toRoute: log:?level=info&showBody=true
 toRoute1:  file:data/output
 toRoute2:  jdbc:dataSource #toRoute2 is the route to the database
 toRoute3:  file:data/output?fileName=Success.txt #signify toRoute SUCCESS is logged into.
 healthRoute: timer:HealthRoute?period=10s  #as want this health endpoint to hit every 10sec, and then check the status of all the components in the camel. If any status is DOWN, then want to trigger an email to the appropriate team.
+
+fromRouteTest: direct:input
+errorRoute: kafka:error_topic?brokers=localhost:9092
 
 message: STAGE environment
 ---
@@ -105,12 +111,15 @@ spring:
 mailTo: sauravsavarn@gmail.com
 mailFrom: savarn.learning@gmail.com
 
-startRoute: timer:CamelRoute?period=10s
-fromRoute: file:data/input?delete=true&readLock=none&moveFailed=error
+fromRoute: kafka:input_item_topic?brokers=localhost:9092&groupId=1&autoOffsetReset=earliest&consumersCount=1
+toRoute: log:?level=info&showBody=true
 toRoute1:  file:data/output
 toRoute2:  jdbc:dataSource #toRoute2 is the route to the database
 toRoute3:  file:data/output?fileName=Success.txt #signify toRoute SUCCESS is logged into.
 healthRoute: timer:HealthRoute?period=10s  #as want this health endpoint to hit every 10sec, and then check the status of all the components in the camel. If any status is DOWN, then want to trigger an email to the appropriate team.
+
+fromRouteTest: direct:input
+errorRoute: kafka:error_topic?brokers=localhost:9092
 
 message: PROD environment
 ---
