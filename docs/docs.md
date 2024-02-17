@@ -94,3 +94,10 @@ REFER the attached *.md link to see detail explanation for connecting to the pos
 ### Error/Exception Handling In Camel Routes
 REFER to know all about error & exception handling through Camel Routes.
 [docs-errorORexception-handling-in-camel-routes.md](partials%2Fdocs-errorORexception-handling-in-camel-routes.md)
+
+### Alerting In Camel Route & Email Config
+[docs-alert-in-camel-route-mail-config.md](partials%2Fdocs-alert-in-camel-route-mail-config.md)
+
+### Monitoring The Camel Route App Health
+[docs-monitoring-the-camel-route-app-health.md](partials%2Fdocs-monitoring-the-camel-route-app-health.md)
+

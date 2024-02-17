@@ -1,6 +1,18 @@
 spring:
   profiles:
     active: dev
+camel:
+  springboot:
+    shutdown-timeout: 2
+    health.indicator.enable: true #with this attribute we are exposing our camel routes 'health' as part of as part of enabling this feature.
+management:
+  endpoints:
+    enabled-by-default: true
+    web:
+      exposure:
+        include: "*"
+  security:
+    enabled: false #making this as false, as if we hit the health endpoint from browser, basically we are going to see what all different components that are running as part of this app, and what are the status of all those components.
 
 ---
 spring:
@@ -32,6 +44,7 @@ fromRoute: file:data/input?delete=true&readLock=none&moveFailed=error
 toRoute1:  file:data/output
 toRoute2:  jdbc:dataSource #toRoute2 is the route to the database
 toRoute3:  file:data/output?fileName=Success.txt #signify toRoute SUCCESS is logged into.
+healthRoute: timer:HealthRoute?period=10s  #as want this health endpoint to hit every 10sec, and then check the status of all the components in the camel. If any status is DOWN, then want to trigger an email to the appropriate team.
 
 message: DEV environment
 ---
@@ -64,6 +77,7 @@ fromRoute: file:data/input?delete=true&readLock=none&moveFailed=error
 toRoute1:  file:data/output
 toRoute2:  jdbc:dataSource #toRoute2 is the route to the database
 toRoute3:  file:data/output?fileName=Success.txt #signify toRoute SUCCESS is logged into.
+healthRoute: timer:HealthRoute?period=10s  #as want this health endpoint to hit every 10sec, and then check the status of all the components in the camel. If any status is DOWN, then want to trigger an email to the appropriate team.
 
 message: STAGE environment
 ---
@@ -96,6 +110,7 @@ fromRoute: file:data/input?delete=true&readLock=none&moveFailed=error
 toRoute1:  file:data/output
 toRoute2:  jdbc:dataSource #toRoute2 is the route to the database
 toRoute3:  file:data/output?fileName=Success.txt #signify toRoute SUCCESS is logged into.
+healthRoute: timer:HealthRoute?period=10s  #as want this health endpoint to hit every 10sec, and then check the status of all the components in the camel. If any status is DOWN, then want to trigger an email to the appropriate team.
 
 message: PROD environment
 ---

@@ -61,10 +61,10 @@ public class CamelRoute extends RouteBuilder {
         //an email using the 'mailProcessor'.
         //Thus under the scenario during the data-exception what it is going to do. It is going to the mailProcessor
         //and in the mailProcessor the process method is going to get invoked, where we have mailSender completely loaded 
-        //with the mail configuration using which to trigger mail to the sender with all exception/error events info. 
+        //with the mail configuration using which to trigger mail to the sender with all exception/error events info.
         onException(DataException.class).log(LoggingLevel.ERROR, "Data Exception in the route ${body}").process(mailProcessor);
 
-        from("{{startRoute}}")
+        from("{{startRoute}}").routeId("mainRoute") ///adding routeId for the APP.   
                 .log("Timer Invoked and the body is ${body}" )
 //                .log("Timer Invoked and the Processing file ${file:name}" )
                 .pollEnrich("{{fromRoute}}")
